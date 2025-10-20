@@ -39,7 +39,7 @@ function draw() {
       }
     }
 
-    resultDiv.innerText = `🎉 축하합니다! ${selected} 당첨 🎉`;
+    resultDiv.innerText = `🎉축하합니다! ${selected} 당첨`;
     bigRankDiv.innerText = selected;
   }, 3000);
 }
@@ -84,4 +84,5 @@ function showRewards() {
     </html>
   `);
 }
+
 
