@@ -7,74 +7,75 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #f5f1e6;
+  background-color: #f5f1e6; /* 베이지톤 */
   font-family: 'Arial', sans-serif;
   color: #5a4b41;
+  overflow: hidden; /* 스크롤 제거 */
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* 세로 가운데 */
-  align-items: center;       /* 가로 가운데 */
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 20px;
-  min-height: 100vh;         /* 모바일 전체 화면 */
+  min-height: 100dvh; /* 모바일 주소창 제외한 화면 전체 */
+  padding: 2vh;
 }
 
 /* 제목 */
 h1 {
-  font-size: 3.5vw;
-  margin: 10px 0;
+  font-size: 6vw;
+  margin: 1vh 0;
 }
 
 h2 {
-  font-size: 2.5vw;
+  font-size: 4vw;
   color: #7d6b5b;
-  margin-bottom: 30px;
+  margin-bottom: 5vh;
 }
 
 /* 버튼 */
 .button {
   display: block;
-  margin: 10px auto;
-  padding: 15px 30px;
-  font-size: 1.2em;
+  margin: 2vh auto;
+  padding: 3vh 5vw;
+  font-size: 4vw;
   background-color: #d8c4a8;
   color: #3e3226;
   border: none;
-  border-radius: 10px;
+  border-radius: 1.5vw;
   cursor: pointer;
   transition: background-color 0.3s;
-  width: 200px;
-  max-width: 80%;
+  width: 80vw;
+  max-width: 500px;
 }
 
 .button:hover {
   background-color: #c8b395;
 }
 
-/* 결과 메시지 */
+/* 결과 텍스트 */
 .result {
-  margin-top: 40px;
-  font-size: 2em;
+  margin-top: 5vh;
+  font-size: 5vw;
   font-weight: bold;
   color: #5a4b41;
 }
 
 /* 등수 크게 */
 .big-rank {
-  font-size: 14vw;   /* 뷰포트 기준 크기 */
+  font-size: 15vw;
   font-weight: 900;
   color: #3e3226;
-  margin-top: 20px;
+  margin-top: 2vh;
 }
 
 /* 로딩 애니메이션 */
 .loading {
   display: none;
-  font-size: 2em;
-  margin-top: 60px;
+  font-size: 5vw;
+  margin-top: 5vh;
   color: #7d6b5b;
 }
 
@@ -86,11 +87,9 @@ h2 {
 .loading .dot1 {
   animation-delay: 0s;
 }
-
 .loading .dot2 {
   animation-delay: 0.3s;
 }
-
 .loading .dot3 {
   animation-delay: 0.6s;
 }
@@ -99,28 +98,4 @@ h2 {
   0% { opacity: 0; }
   50% { opacity: 1; }
   100% { opacity: 0; }
-}
-
-/* 모바일 최적화 (작은 화면 대응) */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 6vw;
-  }
-
-  h2 {
-    font-size: 4.5vw;
-  }
-
-  .button {
-    width: 90%;
-    font-size: 1em;
-  }
-
-  .big-rank {
-    font-size: 20vw;
-  }
-
-  .result {
-    font-size: 1.5em;
-  }
 }
