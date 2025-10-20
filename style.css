@@ -10,45 +10,50 @@ html, body {
   background-color: #f5f1e6; /* 베이지톤 */
   font-family: 'Arial', sans-serif;
   color: #5a4b41;
-  overflow: hidden; /* 스크롤 제거 */
+  overflow: hidden; /* 스크롤 없애기 */
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;  /* 세로 중앙 */
+  align-items: center;      /* 가로 중앙 */
   text-align: center;
-  min-height: 100dvh; /* 모바일 주소창 제외한 화면 전체 */
-  padding: 2vh;
+  min-height: 100dvh;
+  padding: 0;
 }
 
 /* 제목 */
 h1 {
-  font-size: 30vw;
-  margin: 1vh 0;
+  font-size: 15vw; /* 화면 가로 기준으로 아주 크게 */
+  margin: 0.5vh 0 0.5vh 0;
+  line-height: 1;
 }
 
 h2 {
-  font-size: 20vw;
+  font-size: 8vw;
   color: #7d6b5b;
-  margin-bottom: 5vh;
+  margin: 0 0 4vh 0;
 }
 
 /* 버튼 */
 .button {
-  display: block;
-  margin: 2vh auto;
-  padding: 30vh 50vw;
-  font-size: 40vw;
+  width: 90vw;            /* 화면 가로 90% */
+  height: 18vh;           /* 화면 세로 18% */
+  font-size: 10vw;        /* 버튼 안 글자도 큼 */
   background-color: #d8c4a8;
   color: #3e3226;
   border: none;
-  border-radius: 1.5vw;
+  border-radius: 2vw;
   cursor: pointer;
+  margin: 2vh 0;
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
   transition: background-color 0.3s;
-  width: 80vw;
-  max-width: 500px;
 }
 
 .button:hover {
@@ -58,23 +63,25 @@ h2 {
 /* 결과 텍스트 */
 .result {
   margin-top: 5vh;
-  font-size: 5vw;
+  font-size: 15vw;      /* 결과 문구도 아주 큼 */
   font-weight: bold;
   color: #5a4b41;
+  line-height: 1;
 }
 
 /* 등수 크게 */
 .big-rank {
-  font-size: 15vw;
+  font-size: 30vw;     /* 등수는 화면 가로 30% 꽉 차게! */
   font-weight: 900;
   color: #3e3226;
-  margin-top: 2vh;
+  margin-top: 1vh;
+  line-height: 1;
 }
 
 /* 로딩 애니메이션 */
 .loading {
   display: none;
-  font-size: 5vw;
+  font-size: 10vw;
   margin-top: 5vh;
   color: #7d6b5b;
 }
@@ -87,9 +94,11 @@ h2 {
 .loading .dot1 {
   animation-delay: 0s;
 }
+
 .loading .dot2 {
   animation-delay: 0.3s;
 }
+
 .loading .dot3 {
   animation-delay: 0.6s;
 }
@@ -99,4 +108,3 @@ h2 {
   50% { opacity: 1; }
   100% { opacity: 0; }
 }
-
